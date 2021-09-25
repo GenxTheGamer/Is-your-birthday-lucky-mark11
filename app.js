@@ -1,6 +1,7 @@
 const birthDate = document.querySelector("#birth-date"); //Date input
 const luckyNum = document.querySelector("#lucky-number"); //Lucky Number input
 const checkButton = document.querySelector("#check-button"); //Check Button for result.
+const resultArea = document.querySelector("#txt-result");
 
 function getSum(dob) {
   let sum = 0;
@@ -27,13 +28,12 @@ function checkLucky(sumOfDate, luckyNumValue) {
 function checkEventListener() {
   const luckyNumValue = luckyNum.value;
   const valueOfDate = valueCheck(birthDate);
-  console.log(valueOfDate);
 
   const sumOfDate = getSum(valueOfDate);
-  console.log(sumOfDate);
 
   const checkOfLucky = checkLucky(sumOfDate, luckyNumValue);
-  console.log(checkOfLucky);
+
+  resultArea.innerText = checkOfLucky;
 }
 
 checkButton.addEventListener("click", () => checkEventListener());
