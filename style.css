@@ -1,4 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
 :root {
-    --primary-color: #4F46E5;
-    --secondary-color: #818CF8;
+    --primary-color: #818CF8;
+    --text-color: #FCD34D;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+input,label {
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+
+}
+
+
+input {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+
+#check-button {
+    display: block;
+    margin-top: 1rem;
+    margin: auto;
+    background: transparent;
+    color: var(--text-color);
+    border-color: var(--text-color);
+    border-width: medium;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#txt-result {
+    text-align: center;
+    padding-top: 0.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
 }

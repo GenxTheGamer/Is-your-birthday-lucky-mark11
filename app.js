@@ -19,9 +19,9 @@ function valueCheck(dob) {
 
 function checkLucky(sumOfDate, luckyNumValue) {
   if (sumOfDate % luckyNumValue === 0) {
-    return "You are lucky :D";
+    return "You are Lucky!!!! 😇";
   } else {
-    return "you are unlucky , sadge";
+    return "You are Unlucky 😔";
   }
 }
 
