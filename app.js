@@ -25,15 +25,25 @@ function checkLucky(sumOfDate, luckyNumValue) {
   }
 }
 
+// hideMessage(){
+//   resultArea.style.display = "none";
+// }
+
 function checkEventListener() {
+  // hideMessage();
   const luckyNumValue = luckyNum.value;
   const valueOfDate = valueCheck(birthDate);
-
-  const sumOfDate = getSum(valueOfDate);
-
-  const checkOfLucky = checkLucky(sumOfDate, luckyNumValue);
-
-  resultArea.innerText = checkOfLucky;
+  if (valueOfDate === "") {
+    resultArea.innerText = "Enter Date of Birth";
+  } else {
+    if (luckyNumValue === "") {
+      resultArea.innerText = "Enter Lucky Number.";
+    } else {
+      const sumOfDate = getSum(valueOfDate);
+      const checkOfLucky = checkLucky(sumOfDate, luckyNumValue);
+      resultArea.innerText = checkOfLucky;
+    }
+  }
 }
 
 checkButton.addEventListener("click", () => checkEventListener());
